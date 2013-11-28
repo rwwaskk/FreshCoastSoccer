@@ -14,6 +14,10 @@ gem 'twitter-bootstrap-rails'
 
 gem 'sqlite3'
 
+group :production do
+  gem 'pg'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
