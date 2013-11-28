@@ -3,34 +3,97 @@
 body{
   margin:20px; 
   padding:0px;
+  /* IE10 Consumer Preview */ 
+  background-image: -ms-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Opera */ 
+  background-image: -o-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(radial, center center, 0, center center, 475, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+
+  /* Webkit (Chrome 11+) */   
+  background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: radial-gradient(circle farthest-corner at center, #FFFFFF 0%, #00A3EF 100%);
 }
 #container{
   width:780px;
   margin:0 auto;
+  background-color:#FFF;
+  padding:10px;
 }
 #topbar{
   width:auto; 
   display:block; 
-  height:70px;
-  background-color:#C9FFE5;
+  height:105px;
+  color:#000000;
+  /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+/* IE10 Consumer Preview */ 
+  background-image: -ms-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);
+
+/* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);
+
+/* Opera */ 
+  background-image: -o-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+
+/* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top left, #FFFFFF 0%, #00A3EF 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+  background-image: linear-gradient(to bottom right, #FFFFFF 0%, #00A3EF 100%);
+  text-align:left;
+}
+#headline{
+  padding-top:5px;
+  float:left;
+  
+  
+}
+h4#headline4{
+  font-size:13px;
+  line-height:18px;
+  margin:0;
+  font-weight:700;
+}
+h5#headline5{
+    font-size:26px;
+  line-height:25px;
+  color:#FFF;
+  margin:0;
+}
+h6#headline6{
+  font-size:11px;
+  line-height:25px;
+  font-weight:700;
+  margin:0;
+  
 }
 #main{
   width:auto; 
   display:block; 
-  padding:10px 0;
+  padding:5px 0;
 }
 #column_left{
   width:600px;
   margin-right:20px; 
   float:left;
-  margin-top:15px;
+  margin-top:-17px;
 }
 #column_right{
   width:120px; 
   margin-right:20px; 
   float:left;
-  margin-top:10px;
-  padding:10px;
+  padding:5px;
 
   
  }
@@ -63,7 +126,9 @@ div.spacer{
 }
 #logo{
    float:left;
-   height:60px;
+   height:105px;
+   margin-right:10px;
+
 }
 #left-menu{
   margin-top:20px;
@@ -88,6 +153,7 @@ li{
 @import "fontawesome/font-awesome";
 @navbarBackground:@white;
 @navbarLinkColor:@blue;
+
 // Glyphicons
 //@import "twitter/bootstrap/sprites.less";
 
