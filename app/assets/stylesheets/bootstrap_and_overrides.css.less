@@ -1,0 +1,103 @@
+@import "twitter/bootstrap/bootstrap";
+
+body{
+  margin:20px; 
+  padding:0px;
+}
+#container{
+  width:780px;
+  margin:0 auto;
+}
+#topbar{
+  width:auto; 
+  display:block; 
+  height:70px;
+  background-color:#C9FFE5;
+}
+#main{
+  width:auto; 
+  display:block; 
+  padding:10px 0;
+}
+#column_left{
+  width:600px;
+  margin-right:20px; 
+  float:left;
+  margin-top:15px;
+}
+#column_right{
+  width:120px; 
+  margin-right:20px; 
+  float:left;
+  margin-top:10px;
+  padding:10px;
+
+  
+ }
+
+#bottom{
+  width:720px;
+  display:block;
+  height:170px;
+  padding-left:5px;
+}
+
+
+
+
+div.spacer{
+  clear:both; 
+  height:10px; 
+  display:block;
+}
+#footer{
+  width:auto;
+  display:block; 
+  padding:10px 0; 
+  font-size:11px; 
+  color:#666666;
+  text-align:center;
+}
+.navbar{
+  margin-top:5px;
+}
+#logo{
+   float:left;
+   height:60px;
+}
+#left-menu{
+  margin-top:20px;
+  margin-left:-10px;
+  width:130px;
+}
+li{
+  font-size:12px;
+}
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+@navbarBackground:@white;
+@navbarLinkColor:@blue;
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
