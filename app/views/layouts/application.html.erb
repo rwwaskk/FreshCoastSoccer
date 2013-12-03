@@ -11,6 +11,19 @@
 
 </head>
 <body>
+	<div id="fb-root"></div>
+<script>
+
+ 
+(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=443216965790088";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
 	<div id="container">
 		<div id="topbar">
 			<div id="logo">
@@ -69,34 +82,36 @@
 					<li><a href="#">Past Champions</a></li> 
 					<li><a href="#">Accommadations</a></li>
 				</ul>  
-		
-				
-				
-				
-				
+	
+				<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2F1ee4353e.ngrok.com%2F&display=popup">
+					<img src="/assets/facebook.png"/>	
+				</a>
+			 
+			 
 			
+			 
 
-
-
+			  				
 				
+
 			</div>
 			<div class="spacer"></div>
 			<hr/>
 			<div id="bottom">
+			 
 				<h6><small> some of our sponsors</small></h6>
 				<a href="http://www.beachboardwalk.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_boardwalk(new).jpg" width="120" height="105" border="0" /></a>&nbsp;
 				<a href="http://www.brinksawards.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_brinks_sm.gif" width="100" height="94" border="0" /></a>&nbsp;
 				<a href="http://www.hawaiiantropic.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_ht_sm.jpg" width="120" height="69" border="0" /></a>&nbsp;
 				<img src="http://www.beachsoccerchampionships.com/images/logo_espnd_sm.jpg" width="120" height="119" border="0" />
-			</div>
-				
+			</div>	
 			</div>
 			<div class="spacer"></div>
-			
-		
 		</div>
 		
-		<div id="footer">© 2013 U.S. Soccer International</div>
+		<div id="footer">© 2013 U.S. Soccer International
+			
+		</div>
 	</div>
 </body>
 
