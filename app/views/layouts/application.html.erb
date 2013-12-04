@@ -22,6 +22,17 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=443216965790088";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+!function(d,s,id){
+                	var js,fjs=d.getElementsByTagName(s)[0],
+                	p=/^http:/.test(d.location)?'http':'https';
+                	if(!d.getElementById(id)){
+                		js=d.createElement(s);
+                		js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                		fjs.parentNode.insertBefore(js,fjs);
+                		}
+                	}(document, 'script', 'twitter-wjs');
+               
 </script>
 
 	<div id="container">
@@ -83,9 +94,19 @@
 					<li><a href="#">Accommadations</a></li>
 				</ul>  
 	
-				<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2Fmysterious-sea-1696.herokuapp.com/%2F&display=popup">
+				<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" 
+					href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2Fmysterious-sea-1696.herokuapp.com/%2F&display=popup">
 					<img src="/assets/facebook.png"/>	
 				</a>
+				
+				
+				<a href="https://twitter.com/share" class="twitter" target="_blank"
+													onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" 
+													data-url="http://1ee4353e.ngrok.com/" 
+													data-hashtags="BeachSoccer">
+		        	<img src="/assets/twitter.png"/>	
+				</a>
+                
 			 
 			 
 			
