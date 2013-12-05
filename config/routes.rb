@@ -10,7 +10,15 @@ FreshCoastSoccer::Application.routes.draw do
   match '/sponsors' => 'home#sponsors'
   match '/contact' => 'home#contact'
   match '/champs' => 'home#champs'
-  match '/pro_store' => 'home#pro_store'
+  match '/forum' => 'home#forum'
+  match '/accomd' => 'home#accomd'
+  match '/photos' => 'home#photos'
+  match '/past_champ' => 'home#past_champ'
+  match '/detail' => 'home#detail'
+  match '/checkin' => 'home#checkin'
+  match '/referee' => 'home#referee'
+  match '/location' => 'home#location'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
