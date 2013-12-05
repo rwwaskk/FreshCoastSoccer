@@ -6,12 +6,17 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="with=device-width,initial-scale=1.0" />
   
-
+  <meta name="viewport" content="with=device-width,initial-scale=1.0" />
 </head>
+
 <body>
-	<div id="fb-root"></div>
+	
+
+<script>
+var options={ "publisher": "eae8478f-19e5-4ace-a727-37e3a0b4948c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "tumblr", "email"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
 <script>
 
  
@@ -95,24 +100,31 @@
 					<li><a href="accomd">Accommadations</a></li>
 				</ul>  
 	
-				<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" 
-					href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2Ffreshcoastbeachsoccer.com/%2F&display=popup">
-					<img src="/assets/facebook.png"/>	
-				</a>
 				
 				
-				<a href="https://twitter.com/share" class="twitter" target="_blank"
-													onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" 
-													data-url="http://www.freshcoastbeachsoccer.com/" 
-													data-hashtags="BeachSoccer">
-		        	<img src="/assets/twitter.png"/>	
-				</a>
-				
-				<!-- Place this tag where you want the share button to render. -->
-				<a href="https://plus.google.com/share?url=http://www.freshcoastbeachsoccer.com/" 
-				   onclick="return !window.open(this.href, 'Google', 'width=640,height=300')">
-    				<img src="/assets/google.png" alt="Google+" title="Google+"/>
-				</a>
+				<div id="share-bar">
+					<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" 
+						href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2Ffreshcoastbeachsoccer.com/%2F&display=popup">
+						<img class="share" src="/assets/facebook.png"/>	
+					</a>
+				<div class="spacer"></div>
+					<a href="https://twitter.com/share" class="twitter" target="_blank"
+														onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" 
+														data-url="http://www.freshcoastbeachsoccer.com/" 
+														data-hashtags="BeachSoccer">
+		        		<img class="share" src="/assets/twitter.png"/>	
+					</a>
+				<div class="spacer"></div>
+					<!-- Place this tag where you want the share button to render. -->
+					<a href="https://plus.google.com/share?url=http://www.freshcoastbeachsoccer.com/" 
+				   		onclick="return !window.open(this.href, 'Google', 'width=640,height=300')">
+    					<img class="share" src="/assets/google.png" alt="Google+" title="Google+"/>
+					</a>
+		<div class="spacer"></div>
+					<a href="mailto:?subject=Interested in Beach Soccer?&amp;body=Check out this site http://www.freshcoastbeachsoccer.com." title="Share by Email">
+						<img class="share" src="/assets/email.png"/>
+					</a>
+				</div>
 				
                 
 			 
