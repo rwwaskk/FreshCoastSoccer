@@ -20,6 +20,7 @@ FreshCoastSoccer::Application.routes.draw do
   match '/location' => 'home#location'
   match '/pro_store'=>'home#pro_store'
   match '/schedule'=>'home#schedule'
+  match '/emt'=>'home#emt'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
