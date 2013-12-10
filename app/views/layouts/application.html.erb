@@ -140,9 +140,9 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 	  <div style="float:left;padding-left:15px;padding-right:5px;padding-top: 15px;" >
 <%= form_for Invitation.new ,:remote=>true do |f| %>
         <%= f.text_field :sender, placeholder: "enter your name" %><br/>
-        <%= f.text_field :sender_email%>
+        <%= f.text_field :sender_email,placeholder: "enter your email"%></br>
         <%= f.text_field :receiver, placeholder: "enter your friend's name" %><br/>
-        <%= f.text_field :receiver_email%>
+        <%= f.text_field :receiver_email,placeholder: "enter your friend's email"%>
         <%= f.submit 'Send Invitation!' ,:class=>"btn btn-info btn-large" ,:id=>"invite-btn"%>
 <% end %>
  
