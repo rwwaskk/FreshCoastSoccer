@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131209064806) do
+ActiveRecord::Schema.define(:version => 20131210094139) do
+
+  create_table "invitations", :force => true do |t|
+    t.string   "sender"
+    t.string   "sender_email"
+    t.string   "receiver"
+    t.string   "receiver_email"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

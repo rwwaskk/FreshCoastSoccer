@@ -136,18 +136,15 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
                                  
 <div id="test-popup" class="white-popup mfp-hide">
 	
-	 <div class="row">
+	 <div id="row" class="row">
 	  <div style="float:left;padding-left:15px;padding-right:5px;padding-top: 15px;" >
-	  	   <p>Your name:</p>
-  			<input type="text" name="NameTo" id="NameTo"/>
-  			 <p>Your email:</p>
-  			<input type="text" name="NameTo" id="NameTo"/>
-  			 <p>Your friend's name:</p>
-  			<input type="text" name="NameTo" id="NameTo"/>
-  			 <p>Your friend's email:</p>
-  			<input type="text" name="NameTo" id="NameTo"/>
-  			</br>
-        <button class="btn btn-info btn-large">Send Invitation</button>
+<%= form_for Invitation.new ,:remote=>true do |f| %>
+        <%= f.text_field :sender, placeholder: "enter your name" %><br/>
+        <%= f.text_field :sender_email%>
+        <%= f.text_field :receiver, placeholder: "enter your friend's name" %><br/>
+        <%= f.text_field :receiver_email%>
+        <%= f.submit 'Send Invitation!' ,:class=>"btn btn-info btn-large" ,:id=>"invite-btn"%>
+<% end %>
  
   </div>
   <div style="margin-left:3px;float:left;text-align: center;">
@@ -156,8 +153,24 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
   <img src="/assets/flyer_email(new).jpg" width="250px"></img>
   </div>
   </div>
-
+  <div id="thank-you"   style="display: none">
+		 <p>Your Invitation Has Been Successfully Sent!</p>
+		 <p>We Appreciate it!</p>
+		 <button class="btn btn-info" id="another-invite">Click to send another one</button>
+  </div>
 </div>
+ 
+<script>
+	$( "#invite-btn" ).click(function() {
+  		$( "#thank-you" ).show( "slow" );
+  		$( "#row" ).hide( "slow" ); 
+	});
+	
+	$( "#another-invite" ).click(function() {
+  		$( "#thank-you" ).hide( "slow" );
+  		$( "#row" ).show( "slow" ); 
+	});
+</script>
 
 <style>
   .white-popup {

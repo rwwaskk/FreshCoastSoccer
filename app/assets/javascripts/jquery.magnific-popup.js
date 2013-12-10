@@ -379,10 +379,12 @@ MagnificPopup.prototype = {
 	 * Closes the popup
 	 */
 	close: function() {
+		  
 		if(!mfp.isOpen) return;
 		_mfpTrigger(BEFORE_CLOSE_EVENT);
 
 		mfp.isOpen = false;
+		
 		// for CSS3 animation
 		if(mfp.st.removalDelay && !mfp.isLowIE && mfp.supportsTransition )  {
 			mfp._addClassToMFP(REMOVING_CLASS);
@@ -391,6 +393,7 @@ MagnificPopup.prototype = {
 			}, mfp.st.removalDelay);
 		} else {
 			mfp._close();
+			
 		}
 	},
 
