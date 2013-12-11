@@ -3,7 +3,7 @@
 <head>
   <title>FreshCoastSoccer</title>
   <link rel="icon" type="image/png" href="/assets/Soccer-Ball-icon.png">
- 
+  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -52,7 +52,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 	<!-- Collect the nav links, forms, and other content for toggling -->
   		<nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     		<ul class="nav navbar-nav">
-			   <li><a href="registration">Regiration</a></li>
+			   <li><a href="registration">Registration</a></li>
                <li><a href="pro_store">Promotions & Soccer Store</a></li> 
       		   <li><a href="sponsors">Sponsors</a></li>
       		   <li class="dropdown">
@@ -135,24 +135,39 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
                                  
                                  
 <div id="test-popup" class="white-popup mfp-hide">
-	
-	 <div id="row" class="row">
-	  <div style="float:left;padding-left:15px;padding-right:5px;padding-top: 15px;" >
-<%= form_for Invitation.new ,:remote=>true do |f| %>
-        <%= f.text_field :sender, placeholder: "enter your name" %><br/>
-        <%= f.text_field :sender_email,placeholder: "enter your email"%></br>
-        <%= f.text_field :receiver, placeholder: "enter your friend's name" %><br/>
-        <%= f.text_field :receiver_email,placeholder: "enter your friend's email"%><br/>
-        <%= f.submit 'Send Invitation!' ,:class=>"btn btn-info btn-large" ,:id=>"invite-btn"%>
-<% end %>
- 
+	<div id="row" class="row">
+		<div style="float:left;padding-left:15px;padding-right:5px;padding-top: 15px;" >
+			
+		
+<script>
+</script>
+			
+			
+			<%= form_for Invitation.new ,:remote=>true   do |f| %>
+			  <fieldset>
+			  <legend>All fields are required*</legend>
+			    <label >Your Name</label></br>
+      			<%= f.text_field :sender, placeholder: "enter your name",:required=>true  %></br>
+      			 <label>Your Email</label></br>
+      			<%= f.text_field :sender_email,placeholder: "enter your email"%><br/>
+      			<label>Your Friend's Name</label></br>
+      			<%= f.text_field :receiver, placeholder: "enter your friend's name" %><br/>
+      		    <label>Your Friend's Email</label></br>
+      			<%= f.text_field :receiver_email,placeholder: "enter your friend's email"%>
+      			</br></br>
+      			<%= f.submit 'Send Invitation!' ,:class=>"btn btn-info btn-large" ,:id=>"invite-btn"%>
+			</fieldset>
+			
+			
+			<% end %>
+ 		</div>
+  		<div style="margin-left:10px;float:left;text-align: center;">
+  			<h4>Send this flyer to your friend </h4>
+  	 		<h4>and spread the fun!</h4>
+  			<img src="/assets/flyer_email(new).jpg" width="250px"></img>		
+  		</div>
   </div>
-  <div style="margin-left:3px;float:left;text-align: center;">
-  <h4>Send this flyer to your friend </h4>
-  	  <h4>and spread the fun!</h4>
-  <img src="/assets/flyer_email(new).jpg" width="250px"></img>
-  </div>
-  </div>
+  
   <div id="thank-you"   style="display: none">
 		 <p>Your Invitation Has Been Successfully Sent!</p>
 		 <p>We Appreciate it!</p>
@@ -161,10 +176,10 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 </div>
  
 <script>
-	$( "#invite-btn" ).click(function() {
-  		$( "#thank-you" ).show( "slow" );
-  		$( "#row" ).hide( "slow" ); 
-	});
+  //$( "#invite-btn" ).click(function() {
+  	//	$( "#thank-you" ).show( "slow" );
+  		//$( "#row" ).hide( "slow" ); 
+	//});
 	
 	$( "#another-invite" ).click(function() {
   		$( "#thank-you" ).hide( "slow" );
@@ -178,7 +193,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
   background: #FFF;
   padding: 20px;
   width: auto;
-  max-width: 500px;
+  max-width: 600px;
   margin: 20px auto;
 }
 </style>
@@ -189,7 +204,6 @@ $('.open-popup-link').magnificPopup({
   midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
 </script>
- 
  
 
                                  
