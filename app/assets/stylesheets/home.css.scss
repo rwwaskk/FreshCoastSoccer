@@ -10,6 +10,13 @@
 //div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
 //.ui-dialog .ui-state-error { padding: .3em; }
 //.validateTips { border: 1px solid transparent; padding: 0.3em; }
+div.error{
+color: #f33;
+padding: 0;
+margin: 2px 0 0 0;
+font-size: 0.7em;
+padding-left: 18px;
+}
 
 .full-width-image-1 {
   background: url('/assets/beach-wallpaper-183-hd.jpg');
